@@ -13,7 +13,7 @@ export default function Home(): JSX.Element {
   return (
     <Inner>
       <Head>
-        <title>المُقارن | العمولات</title>
+        <title>المقارن | العمولات</title>
       </Head>
       <div className="w-screen h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
         <div className="relative max-w-lg w-full mx-auto flex justify-center items-center py-3">

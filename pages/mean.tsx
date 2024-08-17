@@ -68,7 +68,7 @@ export default function Home(): JSX.Element {
   return (
     <Inner>
       <Head>
-        <title>المُقارن | المتوسط الحسابي</title>
+        <title>المقارن | المتوسط الحسابي</title>
       </Head>
       <div className="h-20" />
       <div className="flex justify-between items-center max-w-lg mx-auto mt-10 mb-5 bg-white py-3 px-6 xs:px-8 rounded-2xl shadow shadow-gray-300">

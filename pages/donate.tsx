@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <Inner>
       <Head>
-        <title>المُقارن | التطهير</title>
+        <title>المقارن | التطهير</title>
       </Head>
       <div className="h-20" />
       <div className="login mt-8 mb-6 relative max-w-lg mx-auto bg-white pb-8 pt-6 px-6 xs:px-8 rounded-2xl shadow shadow-gray-300">

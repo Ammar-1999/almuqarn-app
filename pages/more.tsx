@@ -110,7 +110,7 @@ export default function Page() {
   return (
     <Inner>
       <Head>
-        <title>المُقارن | المزيد</title>
+        <title>المقارن | المزيد</title>
       </Head>
       <div className="space-y-[2px] my-28 px-6 xs:px-0">
         {links.map((e, i) => {

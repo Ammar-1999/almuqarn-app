@@ -49,7 +49,7 @@ export default function Home(): JSX.Element {
   return (
     <Inner>
       <Head>
-        <title>المُقارن | الرئيسية</title>
+        <title>المقارن | الرئيسية</title>
       </Head>
       <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان

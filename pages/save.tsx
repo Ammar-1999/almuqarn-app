@@ -32,7 +32,7 @@ export default function Page() {
   return (
     <Inner>
       <Head>
-        <title>المُقارن | المحفوظات</title>
+        <title>المقارن | المحفوظات</title>
       </Head>
       <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
