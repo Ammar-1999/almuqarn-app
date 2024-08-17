@@ -9,11 +9,11 @@ export default function Document() {
         {process.env.NODE_ENV === "production" ? (
           <script src="/js/registerSW.js" type="text/javascript" async />
         ) : null}
-        <script
+        {/* <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1304205335483256"
           crossOrigin="anonymous"
-        />
+        /> */}
       </Head>
       <body className="min-h-screen antialiased">
         <Main />

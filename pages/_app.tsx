@@ -50,7 +50,7 @@ export default function MyApp({ Component, pageProps, router }) {
         <meta httpEquiv="Cross-Origin-Opener-Policy" content="same-origin" />
         <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
         <meta httpEquiv="Referrer-Policy" content="strict-origin" />
-        <meta property="og:url" content={process.env.NEXT_PUBLIC_URL} />
+        <meta property="og:url" content="https://almuqarn.pages.dev" />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="ar_KSA" />
         <meta property="og:title" content="المُقارن" />
@@ -60,11 +60,7 @@ export default function MyApp({ Component, pageProps, router }) {
         />
         <meta
           property="og:image"
-          content={process.env.NEXT_PUBLIC_URL + "/og.png"}
-        />
-        <meta
-          name="google-site-verification"
-          content="wbVxnN8iN8rILotM0Y_uV82gsmwVTM2hGQ-dbq3Mti0"
+          content={"https://almuqarn.pages.dev" + "/og.png"}
         />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
