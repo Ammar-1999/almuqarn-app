@@ -1,0 +1,166 @@
+@tailwind components;
+@layer components {
+  .social {
+    @apply w-full gap-2 text-center py-3 my-3 border flex items-center justify-start px-4 border-gray-200 rounded-lg text-gray-700 hover:border-gray-900 hover:text-gray-900 hover:shadow focus:border-gray-900 focus:text-gray-900 focus:shadow transition active:scale-[.95];
+  }
+}
+
+
+.login .label {
+  position: absolute;
+  background-color: white;
+  width: max-content;
+  right: 0;
+  cursor: text;
+  transform: translateY(-50%);
+  color: var(--gray-500);
+  font-size: .75rem;
+  margin: 0 6px;
+  padding: 0 6px;
+  transition: 150ms all;
+  user-select: none;
+  z-index: 1;
+}
+.login * {
+  transition-property: color, margin, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.login .input {
+  background: white;
+  position: relative;
+  padding: 8px 12px;
+  outline: none;
+  width: 100%;
+  border: 1px solid var(--gray-300);
+  caret-color: rgba(var(--color-second));
+  z-index: 1;
+}
+
+.login .input:focus {
+  border-color: rgba(var(--color-second));
+}
+.login .input:hover {
+  --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color),
+    0 1px 2px -1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.login .input::placeholder {
+  color: transparent;
+}
+
+.login .input:placeholder-shown ~ .label,
+.login .input[value=''] ~ .label { 
+  top: 50%;
+  font-size: 1rem;
+}
+.login .input:focus ~ .label {
+  top: 0;
+  color: rgba(var(--color-second));
+  font-size: .75rem;
+}
+.login .input:placeholder-shown ~ .percent {
+  opacity: 0;
+}
+.login .input:focus ~ .percent,
+.login .input ~ .percent {
+  opacity: 1;
+}
+.login .note_sort {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: .75rem;
+  top: 73%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.login .animate-search {
+  width: 100%;
+  height: 100%;
+  padding: 17px 10px 5px;
+  background: var(--color-bg);
+  top: -100px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.login .input:focus ~ .note_sort {
+  height: fit-content !important;
+}
+input:focus ~ .inputError {
+  display: block;
+}
+.login .input:focus ~ .note_sort > .animate-search {
+  top: -10px;
+}
+
+.login ul li {
+  list-style: none;
+  padding-right: 20px;
+  position: relative;
+}
+
+div[role="dialog"] {
+  outline: none !important;
+}
+
+.rim1, .rim2, .rim3{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 0rem;
+  height: 0rem;
+}
+.rim1 {
+  animation: expand 2s ease-in-out infinite;
+}
+.rim2 {
+  animation: expand 2s ease-out .2s infinite;
+}
+
+@keyframes expand {
+  0% {
+    top: calc(50% - .25rem);
+    left: calc(50% - .25rem);
+    width: .5rem;
+    height: .5rem;
+    border: black .2rem solid;
+    opacity: 0;
+  }
+  10% {
+    top: calc(50% - 1rem);
+    left: calc(50% - 1rem);
+    width: 2rem;
+    height: 2rem;
+    border: black .2rem solid;
+    opacity: 1;
+  }
+  100% {
+    top: calc(50% - 7.5rem);
+    left: calc(50% - 7.5rem);
+    width: 15rem;
+    height: 15rem;
+    border: black .3rem solid;
+    opacity: 0;
+  }
+}
+.hand_click{ 
+  animation: hand_click 1s ease-in-out .1s infinite alternate-reverse ;
+}
+
+@keyframes hand_click {
+  from {
+    transform: rotate3d(1, 1, 2, 15deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 2, -10deg);
+  }
+}

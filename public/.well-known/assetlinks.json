@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "almuqarn.pages.dev",
+      "sha256_cert_fingerprints": [
+        "ED:37:EC:09:11:1D:A0:66:8B:44:4C:AA:81:90:A2:8B:CB:58:E8:D9:7C:BC:59:31:11:6E:9F:1F:13:70:CF:59",
+        "83:60:2B:62:55:B2:3C:0D:99:05:25:6C:AC:81:85:D5:04:D7:2A:DF:3F:D0:8E:4C:C2:6A:D8:28:20:E9:69:28",
+        "87:BA:09:79:31:C9:E0:3C:B3:F8:6E:F4:C8:24:FB:62:CE:96:AE:59:6F:B4:E9:CB:2C:40:7C:A1:C5:83:87:18"
+      ]
+    }
+  }
+]

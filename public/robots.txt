@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+Disallow: /save
+
+Sitemap: https://almuqarn.pages.dev/sitemap.xml

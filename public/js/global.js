@@ -1,0 +1,1 @@
+var globalThis="undefined"!==typeof globalThis?globalThis:"undefined"!==typeof window?window:self;
