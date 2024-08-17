@@ -24,12 +24,12 @@ const CSP = `
   default-src 'self';
   script-src 'self' 'unsafe-inline'${
     process.env.NODE_ENV !== "production" ? " 'unsafe-eval'" : ""
-  } https://pagead2.googlesyndication.com/;
+  } https://pagead2.googlesyndication.com/ https://ep2.adtrafficquality.google/;
   style-src 'self' 'unsafe-inline';
   font-src 'self';
-  connect-src 'self' https://firestore.googleapis.com/v1/projects/try-e4215/databases/;
-  frame-src 'none';
-  img-src 'self' http://www.w3.org/2000/svg data:;
+  connect-src 'self' https://ep1.adtrafficquality.google/ https://firestore.googleapis.com/v1/projects/try-e4215/databases/;
+  frame-src https://www.google.com/ https://googleads.g.doubleclick.net/ https://tpc.googlesyndication.com/;
+  img-src 'self' https://pagead2.googlesyndication.com/ http://www.w3.org/2000/svg data:;
   object-src 'none';
   form-action 'none';
   `;
