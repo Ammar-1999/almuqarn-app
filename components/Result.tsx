@@ -2,13 +2,8 @@ import { useEffect, useState, useCallback } from "react";
 import { Drawer } from "vaul";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import UpdateStocks from "@/components/updateStocks";
-import dynamic from "next/dynamic";
-const Charts = dynamic(() => import("@/components/Charts"), {
-  ssr: false,
-});
-const Dialog = dynamic(() => import("@/components/ui/Dialog"), {
-  ssr: false,
-});
+import Charts from "@/components/Charts";
+import Dialog from "@/components/ui/Dialog";
 import { useCommission, useStore } from "@/lib/store";
 export default function Result() {
   const [totalCommission, commissions] = useCommission((state) => [

@@ -38,6 +38,7 @@ export default function MyApp({ Component, pageProps, router }) {
   return (
     <main className={font.className}>
       <Head>
+      <meta name="google-site-verification" content="t09SijUm4npHA4Yxxq1UaZAgV6Ibt5gpXD93j2r74Ys" />
         <meta
           httpEquiv="Content-Security-Policy"
           content={CSP.replace(/\s{2,}/g, " ").trim()}
