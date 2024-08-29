@@ -10,5 +10,17 @@
         "87:BA:09:79:31:C9:E0:3C:B3:F8:6E:F4:C8:24:FB:62:CE:96:AE:59:6F:B4:E9:CB:2C:40:7C:A1:C5:83:87:18"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "app.vercel.kuf",
+      "sha256_cert_fingerprints": [
+        "9C:0A:B2:C2:39:F2:6A:56:89:F6:76:2A:86:83:3D:CC:3F:3E:32:2A:03:2D:59:4E:4B:59:65:B0:EC:72:BA:14"
+      ]
+    }
   }
 ]
