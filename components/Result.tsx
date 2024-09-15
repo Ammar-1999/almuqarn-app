@@ -170,7 +170,7 @@ export default function Result() {
                       title: data.map((e) => e.name).join(" - "),
                       url: `${
                         process.env.NEXT_PUBLIC_URL + pathname
-                      }?onlinData=${encodeURI(JSON.stringify(data))}`,
+                      }?onlinData=${encodeURIComponent(JSON.stringify(data))}`,
                     });
                   else {
                     setDialog(true);
@@ -178,7 +178,7 @@ export default function Result() {
                       "share",
                       `${
                         process.env.NEXT_PUBLIC_URL + pathname
-                      }?onlinData=${encodeURI(JSON.stringify(data))}`
+                      }?onlinData=${encodeURIComponent(JSON.stringify(data))}`
                     );
                   }
                 } catch (_) {
@@ -187,7 +187,7 @@ export default function Result() {
                     "share",
                     `${
                       process.env.NEXT_PUBLIC_URL + pathname
-                    }?onlinData=${encodeURI(JSON.stringify(data))}`
+                    }?onlinData=${encodeURIComponent(JSON.stringify(data))}`
                   );
                 }
               }}

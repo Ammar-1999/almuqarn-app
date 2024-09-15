@@ -90,7 +90,7 @@ export default function Page() {
               >
                 <Link
                   className="p-4 flex-1 truncate"
-                  href={"/?onlinData=" + encodeURI(JSON.stringify(e))}
+                  href={"/?onlinData=" + encodeURIComponent(JSON.stringify(e))}
                 >
                   {e.reduce(
                     (acc, curr) => acc + (acc ? " - " : "") + curr.name,

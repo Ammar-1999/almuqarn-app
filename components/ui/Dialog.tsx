@@ -115,7 +115,7 @@ export default function Dialog() {
                       <div className="flex justify-center my-2 h-11">
                         <a
                           href={`https://wa.me/?text=${
-                            encodeURI(searchParams.get("share") || "")
+                            encodeURIComponent(searchParams.get("share") || "")
                           }`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -151,7 +151,7 @@ export default function Dialog() {
                         <div className="w-6" />
                         <a
                           href={`https://www.facebook.com/sharer/sharer.php?u=${
-                            encodeURI(searchParams.get("share") || "")
+                            encodeURIComponent(searchParams.get("share") || "")
                           }`}
                           target="_blank"
                           rel="noopener noreferrer"
@@ -187,7 +187,7 @@ export default function Dialog() {
                           aria-describedby="helper-text-explanation"
                           className="bg-gray-50 border border-s-0 border-gray-300 text-gray-500 text-sm block w-full p-2.5 rounded-r-lg"
                           value={
-                            encodeURI(searchParams.get("share") || "")
+                            encodeURIComponent(searchParams.get("share") || "")
                           }
                           readOnly
                           disabled
@@ -197,7 +197,7 @@ export default function Dialog() {
                             onClick={() => {
                               try {
                                 navigator.clipboard.writeText(
-                                  encodeURI(searchParams.get("share") || "")
+                                  encodeURIComponent(searchParams.get("share") || "")
                                 );
                                 toast.success("تم النسخ");
                               } catch (_) {
