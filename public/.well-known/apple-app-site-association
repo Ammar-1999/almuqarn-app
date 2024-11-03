@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "PC9NXG83Y8.app.vercel.almuqarn",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

@@ -79,7 +79,7 @@ export default function Charts({ setTotalGoals, setCommissionOut }) {
             ).toFixed(3);
             newObject[j][data[i].name] = newVal;
             anim[j][data[i].name] = 0;
-            max = Math.abs(newVal) > max ? +parseInt(Math.abs(newVal).toString()) : max;
+            max = Math.abs(newVal) > max ? Math.ceil(Math.abs(newVal)) : max;
             totalGoals[data[i].name] = newVal;
           } else {
             if (commissions.on) {
@@ -100,7 +100,7 @@ export default function Charts({ setTotalGoals, setCommissionOut }) {
             allStocks -= +data[i].goals[j].sold;
             newObject[j][data[i].name] = newVal;
             anim[j][data[i].name] = 0;
-            max = Math.abs(newVal) > max ? +parseInt(Math.abs(newVal).toString()) : max;
+            max = Math.abs(newVal) > max ? Math.ceil(Math.abs(newVal)) : max;
 
             totalGoals[data[i].name] = (totalGoals[data[i].name] || 0) + newVal;
           }

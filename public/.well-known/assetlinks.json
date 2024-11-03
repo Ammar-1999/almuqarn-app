@@ -5,9 +5,10 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "app.vercel.kuf",
+      "package_name": "app.vercel.almuqarn",
       "sha256_cert_fingerprints": [
-        "9C:0A:B2:C2:39:F2:6A:56:89:F6:76:2A:86:83:3D:CC:3F:3E:32:2A:03:2D:59:4E:4B:59:65:B0:EC:72:BA:14"
+        "9C:0A:B2:C2:39:F2:6A:56:89:F6:76:2A:86:83:3D:CC:3F:3E:32:2A:03:2D:59:4E:4B:59:65:B0:EC:72:BA:14",
+        "0D:DF:4B:0B:05:21:2E:90:49:A6:18:82:7C:C6:F4:3B:B0:DD:EB:5A:EC:FD:BC:83:4E:29:00:FE:98:F7:97:16"
       ]
     }
   }
