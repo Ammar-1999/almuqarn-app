@@ -5,17 +5,20 @@ import UpdateStocks from "@/components/updateStocks";
 import Charts from "@/components/Charts";
 import Dialog from "@/components/ui/Dialog";
 import { useCommission, useStore } from "@/lib/store";
+import { useShallow } from "zustand/react/shallow";
 export default function Result() {
   const [totalCommission, commissions] = useCommission((state) => [
     state.totalCommission,
     state.commissions,
   ]);
-  const { data, setSave, save, unSave } = useStore((state) => ({
-    data: state.data,
-    unSave: state.unSave,
-    setSave: state.setSave,
-    save: state.save,
-  }));
+  const { data, setSave, save, unSave } = useStore(
+    useShallow((state) => ({
+      data: state.data,
+      unSave: state.unSave,
+      setSave: state.setSave,
+      save: state.save,
+    }))
+  );
   const [dialog, setDialog] = useState(false);
   const [commissionIn, setCommissionIn] = useState([]);
   const [commissionOut, setCommissionOut] = useState({});
@@ -204,9 +207,9 @@ export default function Result() {
               />
             </svg>
           </div>
-          <div className="flex max-w-3xl px-2 my-3 md:px-4 w-full mx-auto justify-center items-center text-first text-center text-lg font-semibold h-4">
+          {/* <div className="flex max-w-3xl px-2 my-3 md:px-4 w-full mx-auto justify-center items-center text-first text-center text-lg font-semibold h-4">
             اعلان
-          </div>
+          </div> */}
           <div className="max-w-3xl px-2 pb-4 md:px-4 w-full mx-auto flex flex-col overflow-auto scroll rounded-t-[10px]">
             <div className="space-y-[2px] mt-6">
               <div className="flex justify-center w-full space-x-[1px] space-x-reverse max-w-3xl mx-auto bg-white rounded-t-xl shadow-sm overflow-hidden">
@@ -361,7 +364,9 @@ export default function Result() {
                     if (!e.percent || +e.percent == 0) return null;
                     let percent =
                       (e.percent / 100) *
-                      ((e.price - ((commissions.on ? +totalCommission : 0) / 100) * e.price) *
+                      ((e.price -
+                        ((commissions.on ? +totalCommission : 0) / 100) *
+                          e.price) *
                         e.count);
                     return (
                       <div
@@ -399,9 +404,9 @@ export default function Result() {
               setCommissionOut={setCommissionOut}
             />
           </div>
-          <div className="flex max-w-3xl px-2 my-3 md:px-4 w-full mx-auto justify-center items-center text-first text-center text-lg font-semibold h-4">
+          {/* <div className="flex max-w-3xl px-2 my-3 md:px-4 w-full mx-auto justify-center items-center text-first text-center text-lg font-semibold h-4">
             اعلان
-          </div>
+          </div> */}
         </Drawer.Content>
       </Drawer.Portal>
     </Drawer.Root>

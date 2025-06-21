@@ -1,11 +1,12 @@
 import { useStore } from "@/lib/store";
 import { useEffect } from "react";
+import { useShallow } from "zustand/react/shallow";
 
 function Error({ statusCode }) {
-  const clearAll = useStore((state) => state.clearAll);
+  const clearAll = useStore(useShallow((state) => state.clearAll));
   useEffect(() => {
-    clearAll()
-  }, [])
+    clearAll();
+  }, []);
   return (
     <p>
       {statusCode

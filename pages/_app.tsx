@@ -38,7 +38,10 @@ export default function MyApp({ Component, pageProps, router }) {
   return (
     <main className={font.className}>
       <Head>
-      <meta name="google-site-verification" content="t09SijUm4npHA4Yxxq1UaZAgV6Ibt5gpXD93j2r74Ys" />
+        <meta
+          name="google-site-verification"
+          content="t09SijUm4npHA4Yxxq1UaZAgV6Ibt5gpXD93j2r74Ys"
+        />
         <meta
           httpEquiv="Content-Security-Policy"
           content={CSP.replace(/\s{2,}/g, " ").trim()}
@@ -108,9 +111,9 @@ export default function MyApp({ Component, pageProps, router }) {
         <title>المقارن</title>
       </Head>
       <Toaster />
-      <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
+      {/* <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
-      </div>
+      </div> */}
       <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-10 px-8 xs:px-0">
         <div className="max-w-lg w-full mx-auto flex items-center justify-center h-full py-2">
           <Link href="/" title="الصفحة الرئيسية">
@@ -135,9 +138,9 @@ export default function MyApp({ Component, pageProps, router }) {
         </ErrorBound>
       </Loading>
       <Menu />
-      <div className="w-full h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg bottom-0 bg-white">
+      {/* <div className="w-full h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg bottom-0 bg-white">
         اعلان
-      </div>
+      </div> */}
     </main>
   );
 }

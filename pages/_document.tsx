@@ -5,7 +5,6 @@ export default function Document() {
       <Head>
         <script src="/js/global.js" type="text/javascript" />
         <script src="/js/queuemicrotask.js" type="text/javascript" />
-        <script src="/js/detectsIOS.js" type="text/javascript" async />
         {process.env.NODE_ENV === "production" ? (
           <script src="/js/registerSW.js" type="text/javascript" async />
         ) : null}

@@ -3,6 +3,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { ValidateText } from "@/lib/validation";
 import { useEffect, useRef, useState } from "react";
 import UpdatePercent from "@/components/UpdatePercent";
+import { useShallow } from "zustand/react/shallow";
 const INPUTE_MAX_CHAR = "لقد وصلت الحد المسموح به";
 const INPUTE_MAX_GOALS = "لايمكن تجاوز مجموع الاسهم المُشتراه";
 const ONLY_NUMBER = "مسموح بأرقام فقط";
@@ -10,13 +11,13 @@ const INPUTE_INVALIED = "هذا الحرف غير مسموح به";
 
 export default function Form({ data, index, inputErr, setDataError }) {
   const { setData, setDataGoals, clear, addDataGoals, deleteDataGoal } =
-    useStore((state) => ({
+    useStore(useShallow((state) => ({
       setData: state.setData,
       setDataGoals: state.setDataGoals,
       clear: state.clear,
       addDataGoals: state.addDataGoals,
       deleteDataGoal: state.deleteDataGoal,
-    }));
+    })));
   const inputTitle = useRef<HTMLInputElement>(null);
   const [changeTitle, setChangeTitle] = useState(false);
 
@@ -439,9 +440,9 @@ export default function Form({ data, index, inputErr, setDataError }) {
           </div>
         </div>
       </div>
-      <div className="flex max-w-3xl px-2 my-3 md:px-4 w-full mx-auto justify-center items-center text-first text-center text-lg font-semibold h-4">
+      {/* <div className="flex max-w-3xl px-2 my-3 md:px-4 w-full mx-auto justify-center items-center text-first text-center text-lg font-semibold h-4">
         اعلان
-      </div>
+      </div> */}
     </>
   );
 }

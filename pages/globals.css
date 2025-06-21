@@ -265,6 +265,9 @@ label,svg {
   touch-action: manipulation;
   outline: none !important;
 }
+img {
+  color: transparent;
+}
 .noSelect:focus,
 .noSelect:visited .noSelect:active,
 a:focus,

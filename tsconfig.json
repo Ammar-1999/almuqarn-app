@@ -7,7 +7,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "incremental": true,
@@ -27,13 +27,30 @@
         "./*"
       ]
     },
-    "strictNullChecks": true
+    "strictNullChecks": true,
+
+
+
+    "useDefineForClassFields": true,
+    "noImplicitAny": false,
+    /* Bundler mode */
+    "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "downlevelIteration": true,
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "target": "es2015"
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"  ],
+    "**/*.tsx",
+    "global.d.ts"
+  ],
   "exclude": [
     "node_modules"
   ]

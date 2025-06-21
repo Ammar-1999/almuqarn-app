@@ -9,9 +9,9 @@ export default function Page() {
       <Head>
         <title>المقارن | عن المقارن</title>
       </Head>
-      <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
+      {/* <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
-      </div>
+      </div> */}
       <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-10 px-8 xs:px-0">
         <div className="relative max-w-lg w-full mx-auto flex justify-center items-center py-3">
           <div
@@ -56,9 +56,9 @@ export default function Page() {
           السهم، ويُساعدك على تحليل أرباح وأداء أسهم الشركات المختلفة.
         </p>
       </div>
-      <div className="w-full h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg bottom-0 bg-white">
+      {/* <div className="w-full h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg bottom-0 bg-white">
         اعلان
-      </div>
+      </div> */}
     </Inner>
   );
 }
