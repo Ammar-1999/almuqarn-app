@@ -54,14 +54,14 @@ export default function Home(): JSX.Element {
       {/* <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
       </div> */}
-      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-10 px-8 xs:px-0">
+      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
         <div className="max-w-lg w-full mx-auto flex items-center justify-center h-full py-2">
           <Link href="/" title="الصفحة الرئيسية">
             <img src={logo.src} alt="" width={35} height={35} />
           </Link>
         </div>
       </div>
-      <div className="h-20" />
+      <div className="h-10" />
       <div className="flex justify-between items-center max-w-lg mx-auto mt-10 mb-5 bg-white py-3 px-6 xs:px-8 rounded-2xl shadow shadow-gray-300">
         <h3 className="text-lg font-medium">العمولات</h3>
         <Toggle />
@@ -108,7 +108,7 @@ export default function Home(): JSX.Element {
         </div>
       )}
       <div className="h-28" />
-      <div className="w-full h-10 fixed z-10 font-semibold text-center bottom-28 text-white px-6 xs:px-0">
+      <div className="w-full h-10 fixed z-10 font-semibold text-center bottom-20 text-white px-6 xs:px-0">
         <button
           aria-label="مُقارنة"
           type="button"

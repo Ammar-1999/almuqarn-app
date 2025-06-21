@@ -17,7 +17,7 @@ export default function Page() {
       {/* <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
       </div> */}
-      <div className="w-full bg-white fixed z-10 top-10">
+      <div className="w-full bg-white fixed z-10 top-0">
         <div className="w-full relative container flex justify-center items-center py-3">
           <div
             onClick={() => route.back()}

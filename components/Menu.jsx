@@ -12,7 +12,7 @@ export default function Menu() {
         boxShadow: "0px 3px 15px rgba(0, 0, 0, 0.25)",
       }}
       className={`w-full h-16 duration-500 bg-white/60 fixed backdrop-blur-xl z-10 not-suport-glass px-6 xs:px-0 ${
-        !home && !mean && !more && !donate ? "-bottom-10" : "bottom-10 "
+        !home && !mean && !more && !donate ? "-bottom-16" : "bottom-0 "
       }`}
     >
       <div className="max-w-lg w-full mx-auto flex justify-between items-center h-full">

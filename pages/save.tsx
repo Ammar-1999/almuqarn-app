@@ -37,7 +37,7 @@ export default function Page() {
       {/* <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
       </div> */}
-      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-10 px-8 xs:px-0">
+      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
         <div className="relative max-w-lg w-full mx-auto flex justify-center items-center py-3">
           <div
             onClick={() => route.back()}

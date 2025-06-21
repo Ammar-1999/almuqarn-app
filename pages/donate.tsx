@@ -4,7 +4,8 @@ import Head from "next/head";
 import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { ValidateNumber } from "./mean";
-
+import Link from "next/link";
+import logo from "@/assets/logo white.png";
 export default function Home() {
   const [data, setData] = useState({
     price: "",
@@ -31,7 +32,14 @@ export default function Home() {
       <Head>
         <title>المقارن | التطهير</title>
       </Head>
-      <div className="h-20" />
+      <div className="h-10" />
+      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
+        <div className="max-w-lg w-full mx-auto flex items-center justify-center h-full py-2">
+          <Link href="/" title="الصفحة الرئيسية">
+            <img src={logo.src} alt="" width={35} height={35} />
+          </Link>
+        </div>
+      </div>
       <div className="login mt-8 mb-6 relative max-w-lg mx-auto bg-white pb-8 pt-6 px-6 xs:px-8 rounded-2xl shadow shadow-gray-300">
         <div className="flex items-center relative mb-4">
           <h1 className="w-fit text-2xl font-bold pl-2 py-1 leading-[34px]">

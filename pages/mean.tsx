@@ -5,6 +5,8 @@ import Head from "next/head";
 import { ARToEN } from "@/components/Form";
 import { useCommission } from "@/lib/store";
 import Toggle from "@/components/Toggle";
+import Link from "next/link";
+import logo from "@/assets/logo white.png";
 const newData = [
   {
     price: "",
@@ -70,7 +72,14 @@ export default function Home(): JSX.Element {
       <Head>
         <title>المقارن | المتوسط الحسابي</title>
       </Head>
-      <div className="h-20" />
+      <div className="h-10" />
+      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
+        <div className="max-w-lg w-full mx-auto flex items-center justify-center h-full py-2">
+          <Link href="/" title="الصفحة الرئيسية">
+            <img src={logo.src} alt="" width={35} height={35} />
+          </Link>
+        </div>
+      </div>
       <div className="flex justify-between items-center max-w-lg mx-auto mt-10 mb-5 bg-white py-3 px-6 xs:px-8 rounded-2xl shadow shadow-gray-300">
         <h3 className="text-lg font-medium">العمولات</h3>
         <Toggle />

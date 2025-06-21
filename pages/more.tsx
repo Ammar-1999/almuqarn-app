@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Inner from "@/components/Inner";
 import Head from "next/head";
+import logo from "@/assets/logo white.png";
 function Arrow() {
   return (
     <svg
@@ -112,7 +113,15 @@ export default function Page() {
       <Head>
         <title>المقارن | المزيد</title>
       </Head>
-      <div className="space-y-[2px] my-28 px-6 xs:px-0">
+      <div className="h-10" />
+      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
+        <div className="max-w-lg w-full mx-auto flex items-center justify-center h-full py-2">
+          <Link href="/" title="الصفحة الرئيسية">
+            <img src={logo.src} alt="" width={35} height={35} />
+          </Link>
+        </div>
+      </div>
+      <div className="space-y-[2px] my-20 px-6 xs:px-0">
         {links.map((e, i) => {
           return (
             <div

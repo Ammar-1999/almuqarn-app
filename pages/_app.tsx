@@ -114,13 +114,13 @@ export default function MyApp({ Component, pageProps, router }) {
       {/* <div className="w-full bg-white h-10 fixed z-10 py-3 font-semibold text-first text-center text-lg top-0">
         اعلان
       </div> */}
-      <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-10 px-8 xs:px-0">
+      {/* <div className="w-full h-14 bg-white/70 backdrop-blur-xl not-suport-glass text-gray-950 fixed z-10 font-medium text-center top-0 px-8 xs:px-0">
         <div className="max-w-lg w-full mx-auto flex items-center justify-center h-full py-2">
           <Link href="/" title="الصفحة الرئيسية">
             <img src={logo.src} alt="" width={35} height={35} />
           </Link>
         </div>
-      </div>
+      </div> */}
       <Loading>
         <ErrorBound>
           <SendUserData />
