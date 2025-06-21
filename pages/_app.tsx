@@ -3,13 +3,11 @@ import "./forms.css";
 import "@/assets/popover.css";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
-import logo from "@/assets/logo white.png";
 import { Rubik } from "next/font/google";
 import ErrorBound from "@/components/ErrorBound";
 import dynamic from "next/dynamic";
 import { AnimatePresence, LazyMotion, domAnimation } from "framer-motion";
 import Menu from "@/components/Menu";
-import Link from "next/link";
 import FirstTip from "@/components/FirstTip";
 import Loading from "@/components/Loading";
 const SendUserData = dynamic(() => import("@/components/SendUserData"), {
