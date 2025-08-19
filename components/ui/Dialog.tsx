@@ -1,5 +1,5 @@
-import { AnimatePresence,m } from "framer-motion";
-import { useEffect, useState, useCallback } from "react";
+import { AnimatePresence, m } from "framer-motion";
+import { useEffect, useState, useCallback, useMemo } from "react";
 import toast from "react-hot-toast";
 import {
   Root as AlertDialogRoot,
@@ -9,6 +9,7 @@ import {
   Title as AlertDialogTitle,
 } from "@radix-ui/react-alert-dialog";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import LZString from "lz-string";
 
 export default function Dialog() {
   const [open, setOpen] = useState(false);
@@ -45,6 +46,13 @@ export default function Dialog() {
     if (searchParams.get("share") && !open) setOpen(true);
     else if (!searchParams.get("share") && open) setOpen(false);
   }, [searchParams, open]);
+  const compressedData = useMemo(
+    () =>
+      LZString.compressToEncodedURIComponent(
+        JSON.stringify(searchParams.get("share"))
+      ),
+    [searchParams]
+  );
   return (
     <AlertDialogRoot
       open={open}
@@ -114,9 +122,7 @@ export default function Dialog() {
                       </h1>
                       <div className="flex justify-center my-2 h-11">
                         <a
-                          href={`https://wa.me/?text=${
-                            encodeURIComponent(searchParams.get("share") || "")
-                          }`}
+                          href={`https://wa.me/?text=${compressedData}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="active:scale-[0.93] focus:scale-[0.93] hover:bg-opacity-90 transition ease-out"
@@ -150,9 +156,7 @@ export default function Dialog() {
                         </a>
                         <div className="w-6" />
                         <a
-                          href={`https://www.facebook.com/sharer/sharer.php?u=${
-                            encodeURIComponent(searchParams.get("share") || "")
-                          }`}
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${compressedData}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="active:scale-[0.93] focus:scale-[0.93] hover:bg-opacity-90 transition ease-out"
@@ -186,9 +190,7 @@ export default function Dialog() {
                           dir="ltr"
                           aria-describedby="helper-text-explanation"
                           className="bg-gray-50 border border-s-0 border-gray-300 text-gray-500 text-sm block w-full p-2.5 rounded-r-lg"
-                          value={
-                            encodeURIComponent(searchParams.get("share") || "")
-                          }
+                          value={compressedData}
                           readOnly
                           disabled
                         />
@@ -196,9 +198,7 @@ export default function Dialog() {
                           <button
                             onClick={() => {
                               try {
-                                navigator.clipboard.writeText(
-                                  encodeURIComponent(searchParams.get("share") || "")
-                                );
+                                navigator.clipboard.writeText(compressedData);
                                 toast.success("تم النسخ");
                               } catch (_) {
                                 toast.success("تم النسخ");

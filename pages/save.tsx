@@ -5,6 +5,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useShallow } from "zustand/react/shallow";
 import { useRouter } from "next/navigation";
+import LZString from "lz-string";
 const slideIn = {
   initial: {
     opacity: 0,
@@ -90,7 +91,10 @@ export default function Page() {
               >
                 <Link
                   className="p-4 flex-1 truncate"
-                  href={"/?onlinData=" + encodeURIComponent(JSON.stringify(e))}
+                  href={
+                    "/?onlinData=" +
+                    LZString.compressToEncodedURIComponent(JSON.stringify(e))
+                  }
                 >
                   {e.reduce(
                     (acc, curr) => acc + (acc ? " - " : "") + curr.name,

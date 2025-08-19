@@ -6,6 +6,8 @@ import Charts from "@/components/Charts";
 import Dialog from "@/components/ui/Dialog";
 import { useCommission, useStore } from "@/lib/store";
 import { useShallow } from "zustand/react/shallow";
+import LZString from "lz-string";
+import toast from "react-hot-toast";
 export default function Result() {
   const [totalCommission, commissions] = useCommission((state) => [
     state.totalCommission,
@@ -166,33 +168,32 @@ export default function Result() {
             </svg>
             <svg
               onClick={async () => {
+                const compressed = LZString.compressToEncodedURIComponent(
+                  JSON.stringify(data)
+                );
+                const url = `${process.env.NEXT_PUBLIC_URL}?onlinData=${compressed}`;
+                console.log({
+                  title: data.map((e) => e.name).join(" - "),
+                  url,
+                });
+
                 try {
                   // @ts-ignore
                   if (navigator.share)
                     navigator.share({
                       title: data.map((e) => e.name).join(" - "),
-                      url: `${
-                        process.env.NEXT_PUBLIC_URL + pathname
-                      }?onlinData=${encodeURIComponent(JSON.stringify(data))}`,
+                      url,
                     });
                   else {
                     setDialog(true);
-                    addParams(
-                      "share",
-                      `${
-                        process.env.NEXT_PUBLIC_URL + pathname
-                      }?onlinData=${encodeURIComponent(JSON.stringify(data))}`
-                    );
+                    addParams("share", url);
                   }
-                } catch (_) {
+                } catch {
                   setDialog(true);
-                  addParams(
-                    "share",
-                    `${
-                      process.env.NEXT_PUBLIC_URL + pathname
-                    }?onlinData=${encodeURIComponent(JSON.stringify(data))}`
-                  );
+                  addParams("share", url);
                 }
+                navigator.clipboard.writeText(url);
+                toast.success("تم النسخ");
               }}
               className="cursor-pointer p-1"
               width="31px"

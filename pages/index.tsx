@@ -11,6 +11,7 @@ import Inner from "@/components/Inner";
 import Head from "next/head";
 import { useShallow } from "zustand/react/shallow";
 import Toggle from "@/components/Toggle";
+import { parseOnlineData } from "@/lib/online-data";
 export default function Home(): JSX.Element {
   const router = useRouter();
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -31,13 +32,13 @@ export default function Home(): JSX.Element {
   );
   useEffect(() => {
     if (searchParams.get("onlinData")) {
-      const newData = JSON.parse(
-        decodeURIComponent(searchParams.get("onlinData")!)
-      );
-      router.push(process.env.NEXT_PUBLIC_URL + "?data=open", {
-        scroll: false,
-      });
-      setDataOnline(newData);
+      const newData = parseOnlineData(searchParams.get("onlinData")!);
+      if (newData) {
+        router.push(process.env.NEXT_PUBLIC_URL + "?data=open", {
+          scroll: false,
+        });
+        setDataOnline(newData);
+      }
     }
   }, [searchParams]);
 
